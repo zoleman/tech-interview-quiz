@@ -114,7 +114,7 @@ function App() {
   });
 
   useEffect(() => {
-    axios.get('/questions.md').then((response) => {
+    axios.get('./questions.md').then((response) => {
       const parsedData = parseQuizMarkdown(response.data);
       setQuizData(parsedData);
     }).catch((error) => {
