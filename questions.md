@@ -1395,6 +1395,7 @@ Answer:
 
 Question:
 - What is the difference between statements and expressions in Javascript? Why is it important when working with JSX?
+Answer:
     JSX only allows expressions, not full statements
         An expression is any valid unit of code that produces a value. Expressions can be used anywhere a value is expected.
         A statement is a piece of code that performs an action, but doesn’t directly produce a value. Statements do things, but they can’t be embedded inside JSX.
