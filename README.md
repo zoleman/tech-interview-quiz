@@ -1,16 +1,64 @@
-# React + Vite
+# tech-interview-quiz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+`tech-interview-quiz` is a React-based interactive quiz application designed to help practice questions for the web module. It loads questions from a Markdown file (`questions.md`), parses them into topics and questions, and provides an interface where you can search, answer, self-validate, and reveal answers. It’s both a study tool and a practical project for improving your front-end development skills.
 
-Currently, two official plugins are available:
+## Scope
+- Reinforces coding skills by building a real React application with state, effects, parsing logic, and user interaction.
+- Helps study for technical interviews by giving a structured quiz system that can be expanded over time.
+- Provides hands-on experience with modern tooling (React 19, Vite, axios, GitHub Pages deployment).
+- Practice UI logic, state management, validation mechanisms, responsive layouts, and file parsing.
+- Acts as a reusable, extensible personal “interview prep” platform.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
+- **Node.js** (LTS recommended, v18+ works great)
+- **npm** (comes with Node)
+- A modern browser
+- A shell/terminal for running npm commands
 
-## Expanding the ESLint configuration
+## Dependencies
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Runtime Dependencies
+These are required for the application to run:
 
+- **react** – UI framework
+- **react-dom** – DOM renderer for React
+- **axios** – HTTP client used to load `questions.md`
 
-reach project at:
-https://zoleman.github.io/tech-interview-quiz/
+### Development Dependencies
+Used during development, build, and deployment:
+
+- **vite** – Build tool and dev server
+- **@vitejs/plugin-react** – React plugin for Vite
+- **eslint** and plugins – Linting and code quality
+- **gh-pages** – Deployment to GitHub Pages
+- **@types/react**, **@types/react-dom** – Type definitions for editors/TS tooling
+
+### Tooling Configuration
+- `vite.config.js` sets the GitHub Pages base path and tells Vite to include `.md` files in the build.
+
+## Setup / Build / Run
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/zoleman/tech-interview-quiz.git
+cd tech-interview-quiz
+```
+## 2. Install dependencies
+```
+npm install
+```
+## 3. Start the development server
+```
+npm run dev
+# Then open the URL shown in your terminal (usually http://localhost:5173)
+```
+## 4. Build for production
+```
+npm run build
+```
+## 5. Deploy to GitHub Pages
+```
+# This builds and publishes the dist directory to your gh-pages branch.
+npm run deploy
+```
